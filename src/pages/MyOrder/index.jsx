@@ -1,11 +1,12 @@
+import { Layout } from '../Components/Layout/index'
 // import './'
 
 export function MyOrder() {
   return (
     <>
-      <div className='bg-red-500'>
+      <Layout className='bg-red-500'>
         MyOrder
-      </div>
+      </Layout>
     </>
   )
 }

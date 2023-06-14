@@ -1,11 +1,12 @@
+import { Layout } from '../Components/Layout/index'
 // import './'
 
 export function Home() {
   return (
     <>
-      <div className='bg-slate-700'>
+      <Layout>
         Home
-      </div>
+      </Layout>
     </>
   )
 }

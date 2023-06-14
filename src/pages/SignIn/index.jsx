@@ -1,11 +1,12 @@
+import { Layout } from '../Components/Layout/index'
 // import './'
 
 export function SignIn() {
   return (
     <>
-      <div className='bg-sky-800'>
+      <Layout className='bg-sky-800'>
         SignIn
-      </div>
+      </Layout>
     </>
   )
 }

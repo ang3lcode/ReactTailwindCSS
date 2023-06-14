@@ -1,4 +1,5 @@
 import { Layout } from '../Components/Layout/index'
+import { Card } from '../Components/Card/index'
 // import './'
 
 export function Home() {
@@ -6,6 +7,7 @@ export function Home() {
     <>
       <Layout>
         Home
+        <Card/>
       </Layout>
     </>
   )

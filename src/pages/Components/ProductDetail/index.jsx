@@ -1,4 +1,6 @@
+import { XMarkIcon } from '@heroicons/react/24/solid'
 import './ProductDetail.css';
+
 
 export const ProductDetail = () => {
     return (
@@ -7,7 +9,9 @@ export const ProductDetail = () => {
                 <h2 className='font-medium text-xl'>
                     Detail
                 </h2>
-                <div>X</div>
+                <div>
+                    <XMarkIcon className='h-6 w-6 text-black'/>
+                </div>
             </div>
         </aside>
     )

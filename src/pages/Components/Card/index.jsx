@@ -16,7 +16,7 @@ export const Card = (data) => {
         context.setCartProducts([...context.cartProducts, productData])
         context.openCheckoutSideMenu()
         context.isProductDetailOpen ? context.toggleProductDetail() : ''        
-        console.log('cart', context.cartProducts)
+        
     }
     return(
         <div             

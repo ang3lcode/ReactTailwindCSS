@@ -50,7 +50,7 @@ export const ShoppingCartProvider = ({children}) => {
         if(searchType === 'BY_TITLE_AND_CATEGORY'){
             return filteredItemsByCategory(item, searchByCategory).filter(items => items.category.name.toLowerCase().includes(searchByCategory.toLowerCase()))
         }
-        if(searchType){
+        if(!searchType){
             return item
         }
     }
@@ -68,7 +68,7 @@ export const ShoppingCartProvider = ({children}) => {
       }, [item, searchByTitle, searchByCategory])
      
 
-      console.log('filteredItems: ' , filteredItems)
+
 
    
     return (

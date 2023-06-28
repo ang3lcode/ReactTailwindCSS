@@ -18,6 +18,7 @@ export const Navbar = () => {
             <li>
                 <NavLink 
                     to='/all'
+                    onClick={() => context.setSearchByCategory()}
                     className={({isActive})=> 
                         isActive ? activeStyle : undefined
                     }>
@@ -27,6 +28,7 @@ export const Navbar = () => {
             <li>
                 <NavLink 
                     to='/clothes'
+                    onClick={() => context.setSearchByCategory('clothes')}
                     className={({isActive})=> 
                         isActive ? activeStyle : undefined
                     }>
@@ -36,6 +38,7 @@ export const Navbar = () => {
             <li>
                 <NavLink 
                     to='/electronics'
+                    onClick={() => context.setSearchByCategory('electronics')}
                     className={({isActive})=> 
                         isActive ? activeStyle : undefined
                     }>
@@ -45,6 +48,7 @@ export const Navbar = () => {
             <li>
                 <NavLink 
                     to='/furnitures'
+                    onClick={() => context.setSearchByCategory('furniture')}
                     className={({isActive})=> 
                         isActive ? activeStyle : undefined
                     }>
@@ -53,7 +57,8 @@ export const Navbar = () => {
             </li>
             <li>
                 <NavLink 
-                    to='/toys'
+                    to='/Toys'
+                    onClick={() => context.setSearchByCategory('toys')}
                     className={({isActive})=> 
                         isActive ? activeStyle : undefined
                     }>
@@ -64,6 +69,7 @@ export const Navbar = () => {
             <li>
                 <NavLink 
                     to='/others'
+                    onClick={() => context.setSearchByCategory('others')}
                     className={({isActive})=> 
                         isActive ? activeStyle : undefined
                     }>

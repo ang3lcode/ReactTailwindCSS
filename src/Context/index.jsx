@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 export const ShoppingCartContext = createContext()
 
@@ -20,6 +20,17 @@ export const ShoppingCartProvider = ({children}) => {
     const [cartProducts, setCartProducts] = useState([]);
     // chopping cart - order
     const [order, setOrder] = useState([]);
+    // get product
+    const [item, setItem] = useState(null);
+    // get product by title
+    const [searchByTitle, setSearchByTitle] = useState(null);
+    // console.log(searchByTitle)
+    useEffect(() => {
+        fetch('https://api.escuelajs.co/api/v1/products')
+        .then(response => response.json())
+        .then(data => setItem(data))
+      }, [])
+
    
     return (
         <ShoppingCartContext.Provider value={{
@@ -38,7 +49,11 @@ export const ShoppingCartProvider = ({children}) => {
             openCheckoutSideMenu,
 
             order, 
-            setOrder
+            setOrder,
+            item, 
+            setItem,
+            searchByTitle, 
+            setSearchByTitle
             
         }}>
             {children}

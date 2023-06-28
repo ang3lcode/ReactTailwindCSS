@@ -22,6 +22,7 @@ export const ShoppingCartProvider = ({children}) => {
     const [order, setOrder] = useState([]);
     // get product
     const [item, setItem] = useState(null);
+    const [filteredItems, setFilteredItems] = useState(null);
     // get product by title
     const [searchByTitle, setSearchByTitle] = useState(null);
     // console.log(searchByTitle)
@@ -30,6 +31,14 @@ export const ShoppingCartProvider = ({children}) => {
         .then(response => response.json())
         .then(data => setItem(data))
       }, [])
+
+    const filteredItemsByTitle = (item, searchByTitle) => {
+        return item?.filter(items => items.title.toLowerCase().includes(searchByTitle.toLowerCase()))
+    }
+    useEffect(() => {
+        if(searchByTitle) setFilteredItems(filteredItemsByTitle(item, searchByTitle))
+      }, [item, searchByTitle])
+     
 
    
     return (
@@ -53,7 +62,8 @@ export const ShoppingCartProvider = ({children}) => {
             item, 
             setItem,
             searchByTitle, 
-            setSearchByTitle
+            setSearchByTitle,
+            filteredItems,
             
         }}>
             {children}

@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/ReactTailwindCSS/'
+  base: 'https://ang3lcode.github.io/ReactTailwindCSS/',
 })
